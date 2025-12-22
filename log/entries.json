@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-11-03",
+    "slug": "learning-python-basics",
+    "thing": "learning to code",
+    "type": "habit",
+    "proofText": "sample mini project",
+    "proofUrl": "https://stuconestogacon-my.sharepoint.com/:o:/g/personal/psarpomaa6890_conestogac_on_ca/IgA_s1JjrPBHSq6d4F_W5b4FAasHOY2NkKr9M0x2hjeM8mU?e=kbqlVh",
+    "reflection": "coding is 80% problem solving."
+  },
+  {
     "date": "2025-12-22",
     "slug": "shipping-fishing-things-site",
     "thing": "finishing-thingz website development",
@@ -8,5 +17,4 @@
     "proofUrl": "/",
     "reflection": "built built the site with codes."
   }
-
 ]
