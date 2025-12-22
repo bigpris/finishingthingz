@@ -128,7 +128,7 @@ const newEntry = {
   reflection: args.reflection
 };
 
-// newest first by date (YYYY-MM-DD); fallback to slug for stable ordering
+// newest first by date (YYYY-MM-DD); fallback to slug for stable ordering.
 entries.unshift(newEntry);
 entries.sort((a, b) => {
   const dateCompare = b.date.localeCompare(a.date);
