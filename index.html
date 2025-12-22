@@ -51,6 +51,12 @@
   (async () => {
     const res = await fetch("/log/entries.json", { cache: "no-store" });
     const entries = await res.json();
+    // Ensure newest dates render first even if the file order drifts
+    entries.sort((a, b) => {
+      const dateCompare = b.date.localeCompare(a.date);
+      if (dateCompare !== 0) return dateCompare;
+      return a.slug.localeCompare(b.slug);
+    });
 
     const wrap = document.getElementById("log-list");
     wrap.innerHTML = entries.map(e => `
