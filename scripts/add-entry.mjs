@@ -144,3 +144,4 @@ fs.writeFileSync(
 
 // ---------- done ----------
 console.log(`✅ Added /log/${args.slug}/`);
+
