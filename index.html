@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>finishing-thingz™</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main>
+  <header>
+    <h1>finishing-thingz™</h1>
+    <p class="subtitle">a practice of finishing</p>
+  </header>
+
+  <hr>
+
+  <section class="manifesto">
+    <p><em>i don’t collect ideas. i close loops.</em></p>
+    <p><em>if it’s here, it’s done.</em></p>
+    <div class="mini-line"></div>
+  </section>
+
+  <hr>
+
+  <section class="rules">
+    <h2>rules</h2>
+    <ol>
+      <li>only finished work is posted. &rarr; finished means usable, shipped, or published.</li>
+      <li>posting closes the loop &rarr; no further edits or changes. done counts more.</li>
+      <li>silence is allowed &rarr; nothing is owed until something is finished.</li>
+    </ol>
+  </section>
+
+  <hr>
+
+  <section class="log" id="log">
+    <h2>log</h2>
+    <div id="log-list" class="log-list"></div>
+  </section>
+</main>
+
+<!-- WIDE LOG GRID (outside main) -->
+<div class="log-wide">
+  <div id="log-list"></div>
+</div>
+
+<script>
+  (async () => {
+    const res = await fetch("/log/entries.json", { cache: "no-store" });
+    const entries = await res.json();
+
+    const wrap = document.getElementById("log-list");
+    wrap.innerHTML = entries.map(e => `
+      <article class="entry">
+        <p class="date">${e.date}</p>
+        <p><strong>thing:</strong> <a href="/log/${e.slug}/">${escapeHtml(e.thing)}</a></p>
+        <p><strong>type:</strong> ${escapeHtml(e.type)}</p>
+        <p><strong>proof:</strong> <a href="${e.proofUrl}">${escapeHtml(e.proofText)}</a></p>
+        <p class="reflection"><strong>reflection:</strong> ${escapeHtml(e.reflection)}</p>
+      </article>
+    `).join("");
+  })();
+
+  function escapeHtml(str){
+    return String(str)
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;")
+      .replaceAll("'","&#039;");
+  }
+</script>
+
+</body>
+</html>

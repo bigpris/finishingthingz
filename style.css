@@ -1,0 +1,190 @@
+* { box-sizing: border-box; }
+
+/* ======================
+   VARIABLES
+====================== */
+:root{
+  --bg:#fafafa;
+  --text:#111;
+  --muted:#666;
+  --rule:#e6e6e6;
+
+  --max: 680px;
+  --log-max: 1100px;
+
+  --serif: "Libre Baskerville", serif;
+  --sans: "Inter", sans-serif;
+}
+
+/* ======================
+   BASE
+====================== */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 0.80rem;
+  line-height: 1.6;
+}
+
+/* ======================
+   MAIN (NARROW CONTENT)
+====================== */
+main{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px 20px 48px;
+}
+
+/* ======================
+   HEADER
+====================== */
+header{
+  text-align:center;
+  margin-bottom: 18px;
+}
+
+h1{
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+
+.subtitle{
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ======================
+   SECTION TITLES
+====================== */
+h2{
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  margin: 0 0 14px;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ======================
+   DIVIDERS
+====================== */
+hr{
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 26px 0;
+}
+
+/* ======================
+   MANIFESTO
+====================== */
+.manifesto{
+  padding: 4px 0;
+}
+
+.manifesto p{
+  text-align: center;
+  font-style: italic;
+  margin: 3px 0;
+}
+
+.manifesto .mini-line{
+  width: 120px;
+  height: 1px;
+  background: var(--rule);
+  margin: 16px auto 0;
+}
+
+/* ======================
+   RULES
+====================== */
+.rules ol{
+  padding-left: 18px;
+  margin: 0;
+}
+
+.rules li{
+  margin: 8px 0;
+}
+
+/* ======================
+   LOG — WIDE CONTAINER
+====================== */
+.log-wide{
+  max-width: var(--log-max);
+  margin: 0 auto;
+  padding: 0 20px 72px;
+}
+
+/* ======================
+   LOG GRID
+====================== */
+#log-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* tablet */
+@media (min-width: 700px){
+  #log-list{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* desktop */
+@media (min-width: 1100px){
+  #log-list{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ======================
+   LOG ENTRIES
+====================== */
+.log .entry{
+  margin: 0;
+}
+
+.date{
+  font-family: var(--sans);
+  color: #777;
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+
+.entry p{
+  margin: 0.35rem 0;
+}
+
+.entry strong{
+  font-family: var(--sans);
+  font-weight: 600;
+}
+
+.reflection{
+  color: #333;
+}
+
+/* ======================
+   LINKS
+====================== */
+a{
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover{
+  text-decoration-thickness: 2px;
+}
