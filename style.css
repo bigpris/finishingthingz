@@ -244,6 +244,15 @@ a:hover{
   text-decoration-thickness: 2px;
 }
 
+.back-link{
+  text-decoration: none;
+}
+
+.back-link:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
 /* ======================
    RESPONSIVE HERO
 ====================== */
