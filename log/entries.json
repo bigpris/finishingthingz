@@ -1,12 +1,12 @@
 [
   {
-    "date": "2025-11-03",
-    "slug": "learning-python-basics",
-    "thing": "learning to code",
-    "type": "habit",
-    "proofText": "sample mini project",
-    "proofUrl": "",
-    "reflection": "coding is 80% problem solving."
+    "date": "2025-12-24",
+    "slug": "finishing-thingz-site-refinements",
+    "thing": "refining this site",
+    "type": "coding",
+    "proofText": "this page",
+    "proofUrl": " ",
+    "reflection": "tightened rules and definitions without reopening the launch."
   },
   {
     "date": "2025-12-22",
@@ -16,5 +16,14 @@
     "proofText": "this page",
     "proofUrl": "/",
     "reflection": "my first site without WP & Divi!"
+  },
+  {
+    "date": "2025-11-03",
+    "slug": "learning-python-basics",
+    "thing": "learning to code",
+    "type": "habit",
+    "proofText": "sample mini project",
+    "proofUrl": "",
+    "reflection": "coding is 80% problem solving."
   }
 ]

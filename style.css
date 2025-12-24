@@ -167,7 +167,7 @@ hr{
 }
 
 .rules{
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 /* ======================
@@ -314,3 +314,11 @@ a:hover{
     height: 24px;
   }
 }
+/* ======================
+   FINISHED DETAILS 
+   ====================== */
+details.finished { margin: 24px 0; }
+details.finished summary { cursor: pointer; font-weight: 00; }
+details.finished .finished-body { margin-top: 12px; }
+details.finished p { margin: 6px 0; }
+

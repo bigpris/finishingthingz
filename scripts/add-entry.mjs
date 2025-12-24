@@ -8,6 +8,7 @@ import path from "node:path";
  *   --slug=manifesto-rules \
  *   --thing=finishingthingz manifesto & rules \
  *   --type=system \
+ *   --status=finished \
  *   --proofUrl=/ \
  *   --proofText=this page \
  *   --reflection=built the container first.
@@ -26,6 +27,7 @@ const required = [
   "slug",
   "thing",
   "type",
+  "status",
   "proofUrl",
   "proofText",
   "reflection"
